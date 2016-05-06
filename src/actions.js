@@ -7,21 +7,21 @@ export const CLEAR_COUNTER = 'CLEAR_COUNTER';
   用户操作的‘actions’，每一项都与component组件中的一个onClick绑定
 */
 export function counterAdd() {
-  console.log('counterAdd');
+  // console.log('counterAdd');
   return {
     type: INCREASE,
   }
 }
 
 export function counterDecrease() {
-  console.log('counterDecrease');
+  // console.log('counterDecrease');
   return {
     type: DECREASE,
   }
 }
 
 export function counterClear() {
-  console.log('counterClear');
+  // console.log('counterClear');
   return {
     type: CLEAR_COUNTER,
   }
@@ -48,7 +48,7 @@ export function counterAsyncAdd() {
   // 这里多了一个dispatch
   return function (dispatch) {
     setTimeout(function() {
-      console.log('dispatch', dispatch);
+      // console.log('dispatch', dispatch);
       // 这里直接调用dispatch
       dispatch({
         type: INCREASE

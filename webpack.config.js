@@ -1,4 +1,5 @@
 module.exports = {
+  devTool: 'source_map',
   entry: [
     './src/index'
   ],

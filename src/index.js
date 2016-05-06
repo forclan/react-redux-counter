@@ -1,11 +1,13 @@
 import React from 'react'
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import reducer from './reducers';
 import App from './App'
+import middleWare from './middleWare';
 
-const store = createStore(reducer);
+let finalCreateStore = applyMiddleware(middleWare)(createStore);
+const store = finalCreateStore(reducer);
 console.log('store state', store.getState());
 render(
   <Provider store={store}>

@@ -3,7 +3,7 @@ import counterOperation from './reducers';
 
 export default class Counter extends Component {
   render() {
-    const {counter, counterAdd, counterDecrease, counterClear} = this.props;
+    const {counter, counterAdd, counterDecrease, counterClear, counterAsyncAdd} = this.props;
     return (
       <div>
         <p>
@@ -17,6 +17,9 @@ export default class Counter extends Component {
           <button onClick={counterClear}>
           Clear
           </button>
+          <button onClick={counterAsyncAdd}>
+          AsyncAdd
+          </button>
         </p>
       </div>
     );
@@ -27,4 +30,5 @@ Counter.PropTypes = {
   counterAdd: PropTypes.func.isRequired,
   counterDecrease: PropTypes.func.isRequired,
   counterClear: PropTypes.func.isRequired,
+  counterAsyncAdd: PropTypes.func.isRequired,
 }

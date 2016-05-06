@@ -2,6 +2,7 @@ import * as CounterActions from './actions';
 import {bindActionCreators} from 'redux';
 import Counter from './Counter';
 import {connect} from 'react-redux';
+import {middleWare} from './middleWare';
 
 function mapStateToProps(state) {
   return {

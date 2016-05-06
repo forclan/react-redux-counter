@@ -23,3 +23,14 @@ export function counterClear() {
     type: CLEAR_COUNTER,
   }
 }
+
+export function counterAsyncAdd() {
+  return function (dispatch) {
+    setTimeout(function() {
+      console.log('dispatch', dispatch);
+      dispatch({
+        type: INCREASE
+      })
+    }, 2000);
+  }
+}
